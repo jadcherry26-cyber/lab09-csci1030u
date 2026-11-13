@@ -10,17 +10,30 @@
 
 def two_sum(nums, target):
     # Outline (write your plan here first):
+    # - create a for loop for i in range that takes length of nums
+    # - create a for loop for j in range for i + 1 (to go forward in the list) and checks length of nums
+    # - create a condition for nums[j] that fi it is equal to target - nums[i] 
+    # - then return i and j. and add return[] for the list
     #   ...
     # TODO: return the indices [i, j] (i < j) of the two numbers in `nums` that add up
     #   to `target`. Assume there is exactly one answer.
-    pass
-
+    for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[j] == target - nums[i]:
+                    return [i, j]
+    return[]
 
 def max_profit(prices):
     # Outline:
+    # -
+    # -
+    # -
+    # -
+    # -
     #   ...
     # TODO: `prices[i]` is a stock price on day i. Return the most profit obtainable by
     #   buying on one day and selling on a LATER day. If no profit is possible, return 0.
+    
     pass
 
 
