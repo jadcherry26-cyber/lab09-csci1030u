@@ -25,14 +25,18 @@ def two_sum(nums, target):
 
 def max_profit(prices):
     # Outline:
-    # -
-    # -
-    # -
-    # -
-    # -
-    #   ...
+    # NEED TO MAKE AN ALGORITHM!
+    # - money is what i return, days are just a constraint, so i must buy before i sell
+    # - profit needs to be sell price - buy price, need biggest one or 0
+    # - for [7, 1, 5, 3, 6, 4], best buy day is 1, best sell day is 6 (after 7 because cant sell before buying)
+    # - so if buy at 1, sell at 6, profit = 5
+    # - function takes list and returns 1 number (biggest profit) 
+    #   create table to help 
+    
     # TODO: `prices[i]` is a stock price on day i. Return the most profit obtainable by
     #   buying on one day and selling on a LATER day. If no profit is possible, return 0.
+
+    ''' scrapped
     day = []
     for i in range(day[i]):
         prices = prices[i]
@@ -44,6 +48,7 @@ def max_profit(prices):
             continue
         else:
             return 0
+    '''
 
 def max_subarray(nums):
     # Outline:
