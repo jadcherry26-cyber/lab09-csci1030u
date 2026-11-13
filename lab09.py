@@ -33,9 +33,17 @@ def max_profit(prices):
     #   ...
     # TODO: `prices[i]` is a stock price on day i. Return the most profit obtainable by
     #   buying on one day and selling on a LATER day. If no profit is possible, return 0.
-    
-    pass
-
+    day = []
+    for i in range(day[i]):
+        prices = prices[i]
+        initial_day = 0
+        later_day = 0
+        if initial_day(prices[i]) < later_day(prices[i]):
+            return later_day(prices[i])
+        elif initial_day(prices[i]) > later_day(prices[i]):
+            continue
+        else:
+            return 0
 
 def max_subarray(nums):
     # Outline:
