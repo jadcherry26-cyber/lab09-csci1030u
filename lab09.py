@@ -44,24 +44,40 @@ def max_profit(prices):
 
 def max_subarray(nums):
     # Outline:
-    #   ...
-    # TODO: return the largest sum of any contiguous (in-a-row) block of numbers in
-    #   `nums`. The list has at least one number.
-    pass
+    #   Keep the best sum ending at the current position.
+    #   Either extend the previous block or start a new one here.
+    #   Track the largest sum seen so far.
+    best_ending_here = best_so_far = nums[0]
+
+    for num in nums[1:]:
+        best_ending_here = max(num, best_ending_here + num)
+        best_so_far = max(best_so_far, best_ending_here)
+
+    return best_so_far
 
 
 def is_balanced(s):   # Part 4 - stretch (optional)
-    # Outline:
-    #   ...
-    # TODO: return True if every bracket in `s` is closed correctly and in the right
-    #   order. The brackets are ( ) [ ] { }. (Hint: a list used as a stack works well.)
-    pass
+    # Keep opening brackets on a stack. Each closing bracket must match
+    # the most recent unmatched opening bracket.
+    matching_open = {")": "(", "]": "[", "}": "{"}
+    stack = []
+
+    for char in s:
+        if char in "([{":
+            stack.append(char)
+        elif char in matching_open:
+            if not stack or stack.pop() != matching_open[char]:
+                return False
+
+    return not stack
 
 
 def main():
     # Optional scratch space - try your functions here, then run: python lab09.py
-    # print(two_sum([2, 7, 11, 15], 9))   # [0, 1]
-    pass
+    print(two_sum([2, 7, 11, 15], 9))  # [0, 1]
+    print(max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))  # 6
+    print(is_balanced("({[]})"))  # True
+    print(is_balanced("([)]"))    # False
 
 
 if __name__ == "__main__":
