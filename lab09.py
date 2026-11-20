@@ -23,7 +23,6 @@ def two_sum(nums, target):
 
 def max_profit(prices):
     # Outline:
-    # NEED TO MAKE AN ALGORITHM!
     # - money is what i returns, days are just a constraint, so i must buy before i sell
     # - profit needs to be sell price - buy price, need biggest one or 0
     # - for [7, 1, 5, 3, 6, 4], best buy day is 1, best sell day is 6 (after 7 because cant sell before buying)
